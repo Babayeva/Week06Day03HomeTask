@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+<script> 
+	var capsMaker=document.createElement("div");
+	var capsFrame=document.createElement("div");
+	var  imgFrame=document.createElement("div");
+	// document.getElementsByTagName("div")[0].className="capsMaker";
+	// document.getElementsByTagName("div")[1].className="capsFrame";
+	// capsMaker.appendChild("capsFrame");
+	// document.getElementsByTagName("div")[2].className="imgFrame";
+	// capsFrame.appendChild("imgFrame");
+	var photo=document.createElement("img");
+	// imgFrame.appendChild("photo");
+	// document.getElementsByClassName("imgFrame")[0].getElementsByTagName("img")[0].src='images/1.jpg';
+	var text=document.createElement("div");
+	// document.getElementsByTagName("div")[3].className="capsText";
+	// capsFrame.appendChild("text");
+	var paragraph=document.createElement("p")
+	// text.appendChild("paragraph");
+	var settingCaps=document.createElement("dIV");
+	// document.getElementsByTagName("div")[4].className="settingCaps";
+	// capsMaker.appendChild("settingCaps");
+	var inputOne=document.createElement("input");
+	inputOne.setAttribute("type", "text");
+	inputOne.setAttribute("placeholder", "Seklinizin linkini bura elave edin");
+	// settingCaps.appendChild("inputOne");
+	var buttonOne = document.createElement("BUTTON");    
+	var textTwo = document.createTextNode("ADD IMAGE");       
+	// buttonOne.appendChild("textTwo");                               
+	// settingCaps.appendChild("buttonOne");
+	var inputTwo=document.createElement("input");
+	inputTwo.setAttribute("type", "text");
+	inputTwo.setAttribute("placeholder", "Caps textini bura elave edin");
+	// settingCaps.appendChild("inputTwo");
+	var buttonTwo = document.createElement("BUTTON");    
+	var textThree = document.createTextNode("ADD TEXT");       
+	// buttonTwo.appendChild("textThree");                               
+	// settingCaps.appendChild("buttonTwo");
+
+document.body.
+
+
+	var addImage=function() {
+		var capsImg=document.getElementsByTagName("input")[0].value;
+	if (capsImg=="") {
+		alert("sekil yoxdur")
+	}else{
+		document.getElementsByClassName("imgFrame")[0].getElementsByTagName("img")[0].src='images/'+capsImg;
+	}
+
+	function addText() {
+		var capsText=document.getElementsByTagName("input")[1].value;
+		document.getElementsByClassName("capsText")[0].innerHTML="<p>"+capsText+"</p>"
+	}
+}
+</script>
+</body>
+</html>

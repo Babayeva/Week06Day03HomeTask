@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+		}
+		.slider{
+			width: 100%;
+			height: 500px;
+		}
+		.slider img{
+			width:100%;
+			height: 500px;
+		}
+		.desc{
+			width: calc(100% - 20px);
+			padding: 10px;
+			height: 50px;
+			background-color: lightGray;
+			margin: 0;	
+		}
+		.btngroup button{
+			background-color: gray;
+			color:white;
+			margin:10px;
+			border:none;
+			padding: 5px;
+		}
+		.btngroup button:first-child{
+			float: left;
+		}
+		.btngroup button:last-child{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+<div class="slider">
+<img src="images/1.jpg">
+</div>
+<div class="desc"><p>IMAGE 1</p></div>
+<div class="btngroup">
+<button onclick="prev()">PREV</button>
+<button onclick="next()">NEXT</button>
+</div>
+</div>
+<script>
+	imageArr=["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg"]
+	descArr=["IMAGE 1","IMAGE 2","IMAGE 3","IMAGE 4","IMAGE 5"]
+
+
+	imgSource=document.getElementsByTagName('img')[0];
+	descSource=document.getElementsByClassName('desc')[0].getElementsByTagName('p')[0];
+	descSource.innerHTML=descArr[0];
+	imgSource.src=imageArr[0];
+
+	count=0;
+
+	function prev() {
+		count--;
+		if (count<0) {
+			count=imageArr.length-1;
+		} 
+		imgSource.src=imageArr[count];
+		descSource.innerHTML=descArr[count];
+	}
+	function next() {
+		count++;
+		if (count==imageArr.length) {
+			count=0;
+		} 
+		imgSource.src=imageArr[count];
+		descSource.innerHTML=descArr[count];
+	}
+</script>
+</body>
+</html>
